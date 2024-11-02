@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Predictor</h1>
+        <div class="form-container">
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="square_feet">Square Feet:</label>
+                    <input type="number" id="square_feet" name="square_feet" required min="500" max="5000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms:</label>
+                    <input type="number" id="bedrooms" name="bedrooms" required min="1" max="5">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bathrooms">Bathrooms:</label>
+                    <input type="number" id="bathrooms" name="bathrooms" required min="1" max="3">
+                </div>
+                
+                <div class="form-group">
+                    <label for="age">House Age (years):</label>
+                    <input type="number" id="age" name="age" required min="0" max="50">
+                </div>
+                
+                <button type="submit">Predict Price</button>
+            </form>
+            
+            <div id="result" class="hidden">
+                <h2>Predicted Price:</h2>
+                <p id="predictedPrice"></p>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
